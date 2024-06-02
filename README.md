@@ -1,4 +1,4 @@
-[![NuGet](https://img.shields.io/nuget/v/RoboZZle.ViewModels.svg)](https://www.nuget.org/packages/RoboZZle.ViewModels/)
+[![NuGet](https://img.shields.io/nuget/v/RoboZZle.DesignTime.svg)](https://www.nuget.org/packages/RoboZZle.DesignTime/)
 
 ## RoboZZle client implementation in C#
 
