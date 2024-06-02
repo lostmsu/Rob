@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="fr" original="UWP/STRINGS/EN-US/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6810.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="UWP/STRINGS/EN-US/RESOURCES.RESW" datatype="resx">
+        <trans-unit id="TutorialToggle.Label" translate="yes" xml:space="preserve">
+          <source>Tutorial</source>
+          <target state="final">Tutoriel</target>
+        </trans-unit>
+        <trans-unit id="Conditions.Content" translate="yes" xml:space="preserve">
+          <source>Conditions</source>
+          <target state="translated">Les conditions</target>
+        </trans-unit>
+        <trans-unit id="FirstSteps.Content" translate="yes" xml:space="preserve">
+          <source>First Steps</source>
+          <target state="translated">Les premières démarches</target>
+        </trans-unit>
+        <trans-unit id="Recursion.Content" translate="yes" xml:space="preserve">
+          <source>Recursion</source>
+          <target state="translated">La récursivité</target>
+        </trans-unit>
+        <trans-unit id="TutorialTitle.Text" translate="yes" xml:space="preserve">
+          <source>Tutorial</source>
+          <target state="final">Tutoriel</target>
+        </trans-unit>
+        <trans-unit id="AllCollection.Content" translate="yes" xml:space="preserve">
+          <source>ALL</source>
+          <target state="translated">TOUS</target>
+        </trans-unit>
+        <trans-unit id="App.Text" translate="yes" xml:space="preserve">
+          <source>Rob</source>
+          <target state="final" state-qualifier="mt-suggestion">Rob</target>
+        </trans-unit>
+        <trans-unit id="Settings.Text" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated" state-qualifier="mt-suggestion">Paramètres</target>
+        </trans-unit>
+        <trans-unit id="CampaignCollection.Content" translate="yes" xml:space="preserve">
+          <source>CAMPAIGN</source>
+          <target state="translated" state-qualifier="mt-suggestion">CAMPAGNE</target>
+        </trans-unit>
+        <trans-unit id="CommandsClear.Text" translate="yes" xml:space="preserve">
+          <source>CLEAR</source>
+          <target state="translated" state-qualifier="mt-suggestion">EFFACER</target>
+        </trans-unit>
+        <trans-unit id="DarkTheme.Content" translate="yes" xml:space="preserve">
+          <source>Dark</source>
+          <target state="translated">Sombre</target>
+        </trans-unit>
+        <trans-unit id="HideUnpopular.Text" translate="yes" xml:space="preserve">
+          <source>hide unpopular</source>
+          <target state="translated">Seulement populaires </target>
+        </trans-unit>
+        <trans-unit id="LightTheme.Content" translate="yes" xml:space="preserve">
+          <source>Light</source>
+          <target state="translated">Léger</target>
+        </trans-unit>
+        <trans-unit id="HideSolved.Text" translate="yes" xml:space="preserve">
+          <source>hide solved</source>
+          <target state="translated">Masquer résolus</target>
+        </trans-unit>
+        <trans-unit id="Difficulty.Text" translate="yes" xml:space="preserve">
+          <source>difficulty:</source>
+          <target state="translated">difficulté:</target>
+        </trans-unit>
+        <trans-unit id="Edit.Label" translate="yes" xml:space="preserve">
+          <source>Edit</source>
+          <target state="translated">Correction</target>
+        </trans-unit>
+        <trans-unit id="Loading" translate="yes" xml:space="preserve">
+          <source>loading...</source>
+          <target state="translated" state-qualifier="mt-suggestion">chargement...</target>
+        </trans-unit>
+        <trans-unit id="LoadingScreen.Text" translate="yes" xml:space="preserve">
+          <source>loading...</source>
+          <target state="translated">chargement...</target>
+        </trans-unit>
+        <trans-unit id="LoggingIn" translate="yes" xml:space="preserve">
+          <source>logging in...</source>
+          <target state="translated">vous êtes connecté...</target>
+        </trans-unit>
+        <trans-unit id="Pause.Label" translate="yes" xml:space="preserve">
+          <source>Pause</source>
+          <target state="translated" state-qualifier="mt-suggestion">Pause</target>
+        </trans-unit>
+        <trans-unit id="Popularity.Text" translate="yes" xml:space="preserve">
+          <source>popularity:</source>
+          <target state="translated">popularité:</target>
+        </trans-unit>
+        <trans-unit id="QueryingNewLevels" translate="yes" xml:space="preserve">
+          <source>checking for new puzzles...</source>
+          <target state="translated">téléchargant des nouveaux puzzles...</target>
+        </trans-unit>
+        <trans-unit id="Redo.Label" translate="yes" xml:space="preserve">
+          <source>Redo</source>
+          <target state="translated">Refaire</target>
+        </trans-unit>
+        <trans-unit id="SavingNewLevels" translate="yes" xml:space="preserve">
+          <source>saving updates...</source>
+          <target state="translated" state-qualifier="mt-suggestion">enregistrement des mises à jour...</target>
+        </trans-unit>
+        <trans-unit id="Search.Label" translate="yes" xml:space="preserve">
+          <source>Search</source>
+          <target state="translated" state-qualifier="mt-suggestion">Recherche</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Search button caption</note>
+        </trans-unit>
+        <trans-unit id="SearchPlaceholder" translate="yes" xml:space="preserve">
+          <source>puzzle title</source>
+          <target state="translated" state-qualifier="mt-suggestion">titre de puzzle</target>
+        </trans-unit>
+        <trans-unit id="Start.Label" translate="yes" xml:space="preserve">
+          <source>Start</source>
+          <target state="translated">Exécuter</target>
+        </trans-unit>
+        <trans-unit id="Step.Label" translate="yes" xml:space="preserve">
+          <source>Step</source>
+          <target state="translated">Pas</target>
+        </trans-unit>
+        <trans-unit id="SubmittingSolutions" translate="yes" xml:space="preserve">
+          <source>submitting solutions...</source>
+          <target state="translated">envoyant les solutions...</target>
+        </trans-unit>
+        <trans-unit id="UISetting.Text" translate="yes" xml:space="preserve">
+          <source>UI</source>
+          <target state="translated">L'INTERFACE UTILISATEUR</target>
+        </trans-unit>
+        <trans-unit id="ThemeSetting.Text" translate="yes" xml:space="preserve">
+          <source>Theme</source>
+          <target state="translated" state-qualifier="mt-suggestion">Thème</target>
+        </trans-unit>
+        <trans-unit id="ThemeSettingNote.Text" translate="yes" xml:space="preserve">
+          <source>Theme change requires app to restart</source>
+          <target state="translated">On doit redémarrer l'app après la modification du thème </target>
+        </trans-unit>
+        <trans-unit id="Undo.Label" translate="yes" xml:space="preserve">
+          <source>Undo</source>
+          <target state="translated" state-qualifier="mt-suggestion">Annuler</target>
+        </trans-unit>
+        <trans-unit id="RegisterButton.Content" translate="yes" xml:space="preserve">
+          <source>Register</source>
+          <target state="translated" state-qualifier="mt-suggestion">Enregistrer</target>
+        </trans-unit>
+        <trans-unit id="LoginButton.Content" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="translated">Connexion</target>
+        </trans-unit>
+        <trans-unit id="EmailSetting.Text" translate="yes" xml:space="preserve">
+          <source>E-mail (only to register)</source>
+          <target state="translated">E-mail (s'inscrire seulement)</target>
+        </trans-unit>
+        <trans-unit id="PasswordSetting.Text" translate="yes" xml:space="preserve">
+          <source>Password</source>
+          <target state="translated" state-qualifier="mt-suggestion">Mot de passe</target>
+        </trans-unit>
+        <trans-unit id="LoginSetting.Text" translate="yes" xml:space="preserve">
+          <source>Login</source>
+          <target state="translated">Nom d'utilisateur</target>
+        </trans-unit>
+        <trans-unit id="AccountSettingDescription.Text" translate="yes" xml:space="preserve">
+          <source>Connect to the online service to synchronize your solved puzzle list, and share statistics with others.</source>
+          <target state="translated">Se connecter à Internet. pour synchroniser votre liste des puzzles résolus et pour partager des statistiques avec d'autres.</target>
+        </trans-unit>
+        <trans-unit id="AccountSetting.Text" translate="yes" xml:space="preserve">
+          <source>Account</source>
+          <target state="translated">Informations d'identification</target>
+        </trans-unit>
+        <trans-unit id="AI_Agree" translate="yes" xml:space="preserve">
+          <source>Accept</source>
+          <target state="translated" state-qualifier="tm-suggestion">Accepter</target>
+        </trans-unit>
+        <trans-unit id="AI_Agreement" translate="yes" xml:space="preserve">
+          <source>Share the steps you take to solve puzzles with an AI research project. The goal is to build a fully automated solver for Rob. We will analyze what does it take for you to solve puzzles, and improve our algorithm accordingly.
+
+Terms and conditions
+1. You allow submission of puzzle solution telemetry to Lost Tech LLC.
+  Submitted telemetry can include:
+   - opening puzzle
+   - program editing steps (editing commands, undo, redo, etc.)
+   - running, stopping, pausing, and stepping with a robot
+   - timestamps for all actions above
+   - your login and hashed password for RoboZZle.com
+
+2. You allow Lost Tech LLC to use your login and hashed password for RoboZZle.com to verify that you have a valid account on RoboZZle.com. Lost Tech LLC will not store this data or share it with 3rd parties.
+
+3. You allow all other telemetry listed in 1. to be used for the purpose of research in artificial intelligence.
+
+4. You allow Lost Tech LLC royalty-free use of this data, and any derived products of the research for any commercial purpose, including sharing with 3rd parties.</source>
+          <target state="translated">Partagez vos démarches pour résoudre les Rob puzzles avec un projet de recherche en IA. Le but est de construire un solveur entièrement automatisé pour les Rob puzzles. Nous allons analyser ce que faut-il pour résoudrer les puzzles, et améliorer notre algorithme en conséquence.
+
+Termes et conditions
+1. Vous autorisez Lost Tech LLC la soumission de télémetrie de solution de puzzle.
+  La télémétrie peut inclure:
+   - ouverture de puzzle
+   - les étapes d'édition de programme (commandes d'édition, défaire, refaire, etc.)
+   - début, arrêt, pause, pas à pas exécution de programme
+   - horodatages des toutes les actions dessus
+   - Votre nom d'utilisateur et mot de passe haché pour RoboZZle.com
+
+2. Vous autorisez Lost Tech LLC à utiliser votre nom d'utilisateur et mot de passe haché pour RoboZZle.com pour vérifier que vous avez un compte valide sur RoboZZle.com. Lost Tech LLC ne sera pas stocker ces données ou les partager avec des tiers.
+
+3. Vous autorisez Lost Tech LLC l'utilisation des tous les autres télémetries énumérés dans 1. aux fins de la recherche en intelligence artificielle.
+
+4. Vous autorisez Lost Tech LLC l'utilisation gratuite de ces données, et tout produits de la recherche qui en dérivent à des fins commerciales, y compris le partage avec des tiers.</target>
+        </trans-unit>
+        <trans-unit id="AI_Decline" translate="yes" xml:space="preserve">
+          <source>Decline</source>
+          <target state="translated" state-qualifier="tm-suggestion">Refuser</target>
+        </trans-unit>
+        <trans-unit id="AI_MustLogin" translate="yes" xml:space="preserve">
+          <source>To participate in AI research, you must login or register new account</source>
+          <target state="translated">Pour participer à la recherche en IA, vous devez vous connecter ou vous inscrire à un nouveau compte</target>
+        </trans-unit>
+        <trans-unit id="AI_OfferTitle" translate="yes" xml:space="preserve">
+          <source>Participate in AI research</source>
+          <target state="translated">Participer à la recherche en IA</target>
+        </trans-unit>
+        <trans-unit id="AI_Research.Text" translate="yes" xml:space="preserve">
+          <source>AI Research</source>
+          <target state="translated">Recherche en IA</target>
+        </trans-unit>
+        <trans-unit id="AI_ResearchBlog.Text" translate="yes" xml:space="preserve">
+          <source>more info</source>
+          <target state="translated" state-qualifier="tm-suggestion">plus d’infos</target>
+        </trans-unit>
+        <trans-unit id="AI_ResearchSetting.Header" translate="yes" xml:space="preserve">
+          <source>Participate in Rob AI research</source>
+          <target state="translated">Participer à la recherche Rob AI</target>
+        </trans-unit>
+        <trans-unit id="BlueConditionHint.Text" translate="yes" xml:space="preserve">
+          <source>Only on Blue</source>
+          <target state="translated">Bleue seulement</target>
+        </trans-unit>
+        <trans-unit id="CallFunctionHint.Text" translate="yes" xml:space="preserve">
+          <source>Call a function (Fx)</source>
+          <target state="translated">Appeler une fonction (Fx)</target>
+        </trans-unit>
+        <trans-unit id="GreenConditionHint.Text" translate="yes" xml:space="preserve">
+          <source>Only on Green</source>
+          <target state="translated">Verte seulement</target>
+        </trans-unit>
+        <trans-unit id="MoveAroundHint.Text" translate="yes" xml:space="preserve">
+          <source>Select items on the screen</source>
+          <target state="translated">Sélectionner des éléments sur l'écran</target>
+        </trans-unit>
+        <trans-unit id="MovementActionsHint.Text" translate="yes" xml:space="preserve">
+          <source>Move or rotate robot</source>
+          <target state="translated">Robot tourne ou se déplace</target>
+        </trans-unit>
+        <trans-unit id="PaintHint.Text" translate="yes" xml:space="preserve">
+          <source>Paint Cell (when available)</source>
+          <target state="translated">Сhange la couleur (si permis)</target>
+        </trans-unit>
+        <trans-unit id="RedConditionHint.Text" translate="yes" xml:space="preserve">
+          <source>Only on Red</source>
+          <target state="translated">Rouge seulement</target>
+        </trans-unit>
+        <trans-unit id="RunPauseHint.Text" translate="yes" xml:space="preserve">
+          <source>Run/Pause robot</source>
+          <target state="translated">Exécuter/Pause le robot</target>
+        </trans-unit>
+        <trans-unit id="StopHint.Text" translate="yes" xml:space="preserve">
+          <source>Stop robot</source>
+          <target state="translated">Arrêter le robot</target>
+        </trans-unit>
+        <trans-unit id="UnconditionalHint.Text" translate="yes" xml:space="preserve">
+          <source>Remove condition</source>
+          <target state="translated">Supprimer la condition</target>
+        </trans-unit>
+        <trans-unit id="XboxKeyMap.Content" translate="yes" xml:space="preserve">
+          <source>Controller buttons</source>
+          <target state="translated">Boutons du contrôleur</target>
+        </trans-unit>
+        <trans-unit id="No_Internet" translate="yes" xml:space="preserve">
+          <source>No Internet</source>
+          <target state="translated">pas d'Internet</target>
+        </trans-unit>
+        <trans-unit id="SubmitFailed_NoInternet" translate="yes" xml:space="preserve">
+          <source>Failed to submit solution, because online service is unavailable.
+You will need to rerun this puzzle to resubmit.</source>
+          <target state="translated">Impossible d'envoyer la solution, car le service en ligne n'est pas disponible.
+Vous devrez réexécuter ce puzzle pour l'envoyer à nouveau.</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

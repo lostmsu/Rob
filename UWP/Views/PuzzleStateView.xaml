@@ -1,0 +1,81 @@
+﻿<UserControl
+    x:Class="RoboZZle.WinRT.Views.PuzzleStateView"
+    x:Name="StateViewControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:views="using:RoboZZle.WinRT.Views"
+    xmlns:commonViews="using:RoboZZle.WinRT.Common.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sample="using:RoboZZle.DesignTime"
+    mc:Ignorable="d"
+    d:DesignHeight="480"
+    d:DesignWidth="640"
+    d:DataContext="{d:DesignInstance Type=sample:SamplePuzzleStateViewModel, IsDesignTimeCreatable=True}"
+    IsTabStop="False"
+    >
+    <Viewbox UseLayoutRounding="False">
+        <Viewbox.Resources>
+            <Storyboard x:Key="XAnimation">
+                <DoubleAnimation
+                Storyboard.TargetName="Robot"
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)"
+                Duration="{Binding StepDuration, ElementName=StateViewControl, Mode=OneWay}"
+                />
+            </Storyboard>
+            <Storyboard x:Key="YAnimation">
+                <DoubleAnimation
+                Storyboard.TargetName="Robot"
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)"
+                Duration="{Binding StepDuration, ElementName=StateViewControl, Mode=OneWay}"
+                />
+            </Storyboard>
+            <Storyboard x:Key="RotationAnimation">
+                <DoubleAnimation
+                Storyboard.TargetName="Robot"
+                Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)"
+                Duration="{Binding StepDuration, ElementName=StateViewControl, Mode=OneWay}"
+                />
+            </Storyboard>
+        </Viewbox.Resources>
+        <Canvas Width="320" Height="240">
+            <Canvas.RenderTransform>
+                <MatrixTransform Matrix="{Binding Path=PuzzleState, Converter={StaticResource PuzzleAutoScaler}, Mode=OneTime}"/>
+            </Canvas.RenderTransform>
+            
+            <Canvas x:Name="Canvas" Width="320" Height="240"/>
+
+            <views:RobotView x:Name="Robot"
+                             d:DataContext="{d:DesignInstance Type=sample:SampleRobotViewModel, IsDesignTimeCreatable=True}"
+                             >
+                <views:RobotView.RenderTransform>
+                    <CompositeTransform
+                        x:Name="RobotTransform"
+                        CenterX="10" CenterY="10"
+                        />
+                </views:RobotView.RenderTransform>
+                
+                <views:RobotView.Resources>
+                    <commonViews:Animator
+                        x:Key="XAnimator"
+                        Animate="False"
+                        Source="{Binding Position.X, Converter={StaticResource CellSizeScale}, Mode=OneWay}"
+                        Storyboard="{StaticResource XAnimation}"
+                        />
+                    <commonViews:Animator
+                        x:Key="YAnimator"
+                        Animate="False"
+                        Source="{Binding Position.Y, Converter={StaticResource CellSizeScale}, Mode=OneWay}"
+                        Storyboard="{StaticResource YAnimation}"
+                        />
+                    <commonViews:Animator
+                        x:Key="AngleAnimator"
+                        Animate="False"
+                        Source="{Binding Angle, Mode=OneWay}"
+                        Storyboard="{StaticResource RotationAnimation}"
+                        />
+                </views:RobotView.Resources>
+            </views:RobotView>
+        </Canvas>
+    </Viewbox>
+</UserControl>

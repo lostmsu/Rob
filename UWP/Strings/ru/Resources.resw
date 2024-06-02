@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TutorialToggle.Label" xml:space="preserve">
+    <value>Обучение</value>
+  </data>
+  <data name="Conditions.Content" xml:space="preserve">
+    <value>Условия</value>
+  </data>
+  <data name="FirstSteps.Content" xml:space="preserve">
+    <value>Первые шаги</value>
+  </data>
+  <data name="Recursion.Content" xml:space="preserve">
+    <value>Рекурсия</value>
+  </data>
+  <data name="TutorialTitle.Text" xml:space="preserve">
+    <value>Обучение</value>
+  </data>
+  <data name="AllCollection.Content" xml:space="preserve">
+    <value>ВСЕ</value>
+  </data>
+  <data name="App.Text" xml:space="preserve">
+    <value>Роб</value>
+  </data>
+  <data name="Settings.Text" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="CampaignCollection.Content" xml:space="preserve">
+    <value>КАМПАНИЯ</value>
+  </data>
+  <data name="CommandsClear.Text" xml:space="preserve">
+    <value>ОЧИСТИТЬ</value>
+  </data>
+  <data name="DarkTheme.Content" xml:space="preserve">
+    <value>Темная</value>
+  </data>
+  <data name="HideUnpopular.Text" xml:space="preserve">
+    <value>только популярные</value>
+  </data>
+  <data name="LightTheme.Content" xml:space="preserve">
+    <value>Светлая</value>
+  </data>
+  <data name="HideSolved.Text" xml:space="preserve">
+    <value>скрыть решённые</value>
+  </data>
+  <data name="Difficulty.Text" xml:space="preserve">
+    <value>сложность:</value>
+  </data>
+  <data name="Edit.Label" xml:space="preserve">
+    <value>Правка</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>загрузка...</value>
+  </data>
+  <data name="LoadingScreen.Text" xml:space="preserve">
+    <value>Загрузка...</value>
+  </data>
+  <data name="LoggingIn" xml:space="preserve">
+    <value>выполняется вход...</value>
+  </data>
+  <data name="Pause.Label" xml:space="preserve">
+    <value>Пауза</value>
+  </data>
+  <data name="Popularity.Text" xml:space="preserve">
+    <value>популярность:</value>
+  </data>
+  <data name="QueryingNewLevels" xml:space="preserve">
+    <value>загрузка новых головоломок...</value>
+  </data>
+  <data name="Redo.Label" xml:space="preserve">
+    <value>Повторить</value>
+  </data>
+  <data name="SavingNewLevels" xml:space="preserve">
+    <value>сохранение новых уровней...</value>
+  </data>
+  <data name="Search.Label" xml:space="preserve">
+    <value>Поиск</value>
+    <comment>Search button caption</comment>
+  </data>
+  <data name="SearchPlaceholder" xml:space="preserve">
+    <value>название головоломки</value>
+  </data>
+  <data name="Start.Label" xml:space="preserve">
+    <value>Запуск</value>
+  </data>
+  <data name="Step.Label" xml:space="preserve">
+    <value>Шаг</value>
+  </data>
+  <data name="SubmittingSolutions" xml:space="preserve">
+    <value>отправка решений...</value>
+  </data>
+  <data name="UISetting.Text" xml:space="preserve">
+    <value>Интерфейс</value>
+  </data>
+  <data name="ThemeSetting.Text" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="ThemeSettingNote.Text" xml:space="preserve">
+    <value>Изменение темы требует перезапуска приложения</value>
+  </data>
+  <data name="Undo.Label" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="RegisterButton.Content" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="LoginButton.Content" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="EmailSetting.Text" xml:space="preserve">
+    <value>Электронная почта (только для регистрации)</value>
+  </data>
+  <data name="PasswordSetting.Text" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="LoginSetting.Text" xml:space="preserve">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="AccountSettingDescription.Text" xml:space="preserve">
+    <value>Подключитесь к сайту для синхронизации списка решений, и чтобы поделиться статистикой с другими пользователями.</value>
+  </data>
+  <data name="AccountSetting.Text" xml:space="preserve">
+    <value>Синхронизация</value>
+  </data>
+  <data name="AI_Agree" xml:space="preserve">
+    <value>Согласиться</value>
+  </data>
+  <data name="AI_Agreement" xml:space="preserve">
+    <value>Отправьте свои решения задачек Rob нашему исследовательскому проекту, занимающемуся разработкой искуственного интеллекта. Цель проекта - создание полностью автоматического решателя для Rob. Мы проанализируем, какие шаги были предприняты во время решения, в каких местах пришлось подумать, и постараемся улучшить наш алгоритм.
+          
+Условия и положения
+1. Вы разрешаете отправку шагов решения задачек Lost Tech LLC.
+  Передаваемые данные:
+   - открытие задачки
+   - редактирование программы робота (редактирование комманд, отмена, повтор, и т.д.)
+   - запуск, остановка, приостановка и пошаговое выполнение программы роботом
+   - отметки времени для всех перечисленных действий
+   - имя пользователя и защищённый пароль для RoboZZle.com
+
+2. Вы разрешаете Lost Tech LLC использовать имя пользователя и пароль для RoboZZle.com, чтобы авторизовывать Вас на RoboZZle.com. Lost Tech LLC не будет хранить эти данные или делиться ими с посторонними.
+
+3. Вы разрешаете Lost Tech LLC использовать все остальные данные, перечисленные в 1., в исследованиях в области искуственного интеллекта.
+
+4. Вы разрешаете Lost Tech LLC использовать эти данные (за исключением имени пользователя и защищённого пароля) и любые результаты исследования без ограничений в любых коммерческих целях, включая продажу третьим лицам.</value>
+  </data>
+  <data name="AI_Decline" xml:space="preserve">
+    <value>Отказаться</value>
+  </data>
+  <data name="AI_MustLogin" xml:space="preserve">
+    <value>Вы должны войти или зарегистрироваться, чтобы мы смогли отправить решения</value>
+  </data>
+  <data name="AI_OfferTitle" xml:space="preserve">
+    <value>Поучаствуйте в исследовании</value>
+  </data>
+  <data name="AI_Research.Text" xml:space="preserve">
+    <value>Проект ИИ</value>
+  </data>
+  <data name="AI_ResearchBlog.Text" xml:space="preserve">
+    <value>узнать больше</value>
+  </data>
+  <data name="AI_ResearchSetting.Header" xml:space="preserve">
+    <value>Учавствовать в разработке ИИ для Rob</value>
+  </data>
+  <data name="BlueConditionHint.Text" xml:space="preserve">
+    <value>Только на синем</value>
+  </data>
+  <data name="CallFunctionHint.Text" xml:space="preserve">
+    <value>Вызов функции (Fx)</value>
+  </data>
+  <data name="GreenConditionHint.Text" xml:space="preserve">
+    <value>Только на зелёном</value>
+  </data>
+  <data name="MoveAroundHint.Text" xml:space="preserve">
+    <value>Выделение элементов на экране</value>
+  </data>
+  <data name="MovementActionsHint.Text" xml:space="preserve">
+    <value>Повороты и движение робота</value>
+  </data>
+  <data name="PaintHint.Text" xml:space="preserve">
+    <value>Перекрасить клетку (где можно)</value>
+  </data>
+  <data name="RedConditionHint.Text" xml:space="preserve">
+    <value>Только на красном</value>
+  </data>
+  <data name="RunPauseHint.Text" xml:space="preserve">
+    <value>Запуск робота/Пауза</value>
+  </data>
+  <data name="StopHint.Text" xml:space="preserve">
+    <value>Остановить робота</value>
+  </data>
+  <data name="UnconditionalHint.Text" xml:space="preserve">
+    <value>Убрать условие</value>
+  </data>
+  <data name="XboxKeyMap.Content" xml:space="preserve">
+    <value>Кнопки геймпада</value>
+  </data>
+  <data name="No_Internet" xml:space="preserve">
+    <value>Нужен Интернет</value>
+  </data>
+  <data name="SubmitFailed_NoInternet" xml:space="preserve">
+    <value>Не удалось отправить решение из-за недоступности сервиса.
+Нужно будет перезапустить решение, чтобы попробовать отправить снова.</value>
+  </data>
+</root>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ProjectGuidesConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectItemGuides>
+    <ProjectItemGuide TargetFile="ProgramEditor.xaml">
+      <GuideModels>
+        <GuideModel>
+          <Guides>
+            <Guide Alignment="Left" Position="39" />
+            <Guide Alignment="Left" Position="370" />
+            <Guide Alignment="Left" Position="380" />
+            <Guide Alignment="Top" Position="59" />
+            <Guide Alignment="Top" Position="390" />
+            <Guide Alignment="Top" Position="400" />
+            <Guide Alignment="Left" Position="80" />
+            <Guide Alignment="Left" Position="135" />
+            <Guide Alignment="Left" Position="120" />
+            <Guide Alignment="Top" Position="100" />
+            <Guide Alignment="Top" Position="140" />
+            <Guide Alignment="Left" Position="890" />
+            <Guide Alignment="Bottom" Position="50" />
+            <Guide Alignment="Left" Position="355" />
+          </Guides>
+        </GuideModel>
+      </GuideModels>
+    </ProjectItemGuide>
+  </ProjectItemGuides>
+</ProjectGuidesConfiguration>

@@ -1,0 +1,91 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:commands="using:RoboZZle.WinRT.Views.Commands"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    >
+    <DataTemplate x:Key="CallActionIcon">
+        <ContentControl
+                Height="42" Width="42"
+                VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <TextBlock FontSize="26" Foreground="{Binding Condition, Converter={StaticResource ColorToForegroundBrush}}"
+                       FontFamily="Segoe UI">
+                <Run Text="{Binding Action.Function, Converter={StaticResource FormatConverter}, ConverterParameter='F{0}'}"/>
+            </TextBlock>
+        </ContentControl>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="PaintActionIcon">
+        <Canvas Height="42" Width="42">
+            <Path Data="M5.658,0.462C5.013,0.309 4.37,0.154 3.725,0 2.196,0.162 1.02,0.9 0.296,2.37L0,3.607C0.042,5.588 1.471,7.188 2.444,8.773 4.725,12.488 7.128,16.472 9.252,19.971 8.285,20.493 7.275,21.013 6.999,22.212 6.622,23.859 8.102,25.148 8.738,26.227 12.212,24.187 16.378,21.536 20.05,19.281 20.436,19.047 21.638,18.494 21.68,18.281 21.704,18.156 20.814,16.873 20.68,16.652 20.362,16.137 19.862,15.416 19.314,15.181 17.654,14.462 16.834,15.471 15.694,15.949 13.624,12.42 11.054,8.392 8.809,4.733 7.858,3.187 7.104,1.377 5.658,0.462"
+                Height="26" Canvas.Left="3.068" Canvas.Top="2.876" Width="22" UseLayoutRounding="False"
+                Fill="{Binding Condition, Converter={StaticResource ColorToForegroundBrush}}"/>
+            <Path Data="M25.708,9.151C25.758,8.945 25.807,8.739 25.856,8.533 25.763,8.061 25.552,7.886 25.153,7.711 23.715,7.07 22.242,7.007 21.031,6.479 17.466,4.922 15.171,2.486 13.093,0 9.822,2.033 6.44,4.149 3.2,6.139 2.099,6.815 0.89,7.35 0,8.236 8.808,21.446 24.096,13.729 25.708,9.151"
+                Height="16" Canvas.Left="13.027" Canvas.Top="23.173" Width="26" UseLayoutRounding="False"
+                Fill="{Binding Action.Color, Converter={StaticResource ColorToBrush}}"/>
+        </Canvas>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="MoveForwardIcon">
+    	<Canvas Height="42" Width="42">
+			<Path Data="F1M5.583,30L5.583,4.287 3.086,6.904 0,6.904 6.948,0 7.032,0 14,6.904 10.914,6.904 8.375,4.242 8.375,30z" Fill="{Binding Condition, Converter={StaticResource ColorToForegroundBrush}}" Height="30" Canvas.Left="14" Canvas.Top="6" Width="14" UseLayoutRounding="False"/>
+    	</Canvas>
+    </DataTemplate>
+    <DataTemplate x:Key="TurnLeftIcon">
+    	<Canvas Height="42" Width="42" RenderTransformOrigin="0.5,0.5">
+			<Path Data="F1M9.388,30C11.102,30 12.722,29.791 14.248,29.369 15.776,28.951 17.116,28.266 18.264,27.316 19.418,26.365 20.327,25.125 20.997,23.594 21.665,22.062 22,20.186 22,17.961 22,15.736 21.665,13.857 20.997,12.328 20.327,10.797 19.418,9.555 18.264,8.604 17.116,7.654 15.776,6.969 14.248,6.553 12.722,6.129 11.102,5.92 9.388,5.92L4.4,5.92 7.199,3.248 7.199,0 0,7.336 0,7.424 7.199,14.734 7.199,11.488 4.445,8.857 9.297,8.857C10.71,8.857 12.011,9.008 13.201,9.301 14.39,9.594 15.412,10.096 16.269,10.803 17.126,11.51 17.796,12.445 18.278,13.609 18.758,14.773 19,16.221 19,17.961 19,19.727 18.758,21.197 18.278,22.367 17.796,23.537 17.126,24.471 16.269,25.162 15.412,25.854 14.39,26.34 13.201,26.621 12.011,26.902 10.71,27.039 9.297,27.039L6.882,27.039 6.882,30z"
+				Fill="{Binding Condition, Converter={StaticResource ColorToForegroundBrush}}"
+				Height="30" Canvas.Left="10" Canvas.Top="6" Width="22" UseLayoutRounding="False"/>
+    	</Canvas>
+    </DataTemplate>
+    <DataTemplate x:Key="TurnRightIcon">
+    	<Canvas Height="42" Width="42" RenderTransformOrigin="0.5,0.5">
+			<Path Data="F1M12.612,30C10.898,30 9.278,29.791 7.752,29.369 6.224,28.951 4.884,28.266 3.736,27.316 2.582,26.365 1.673,25.125 1.003,23.594 0.335,22.062 0,20.186 0,17.961 0,15.736 0.335,13.857 1.003,12.328 1.673,10.797 2.582,9.555 3.736,8.604 4.884,7.654 6.224,6.969 7.752,6.553 9.278,6.129 10.898,5.92 12.612,5.92L17.6,5.92 14.801,3.248 14.801,0 22,7.336 22,7.424 14.801,14.734 14.801,11.488 17.555,8.857 12.703,8.857C11.29,8.857 9.989,9.008 8.799,9.301 7.61,9.594 6.588,10.096 5.731,10.803 4.874,11.51 4.204,12.445 3.722,13.609 3.242,14.773 3,16.221 3,17.961 3,19.727 3.242,21.197 3.722,22.367 4.204,23.537 4.874,24.471 5.731,25.162 6.588,25.854 7.61,26.34 8.799,26.621 9.989,26.902 11.29,27.039 12.703,27.039L15.118,27.039 15.118,30z"
+				Fill="{Binding Condition, Converter={StaticResource ColorToForegroundBrush}}"
+				Height="30" Canvas.Left="10" Canvas.Top="6" Width="22" UseLayoutRounding="False"/>
+    	</Canvas>
+    </DataTemplate>
+   
+    <commands:MoveTemplateSelector
+        x:Key="MoveTemplateSelector"
+        Forward="{StaticResource MoveForwardIcon}"
+        TurnLeft="{StaticResource TurnLeftIcon}"
+        TurnRight="{StaticResource TurnRightIcon}" />
+
+    <DataTemplate x:Key="MoveIcon">
+        <ContentControl
+                    ContentTemplateSelector="{StaticResource MoveTemplateSelector}"
+                    Content="{Binding}"
+                />
+    </DataTemplate>
+
+    <DataTemplate x:Key="PopularityIcon" >
+        <Canvas Width="10" Height="10" Margin="0,0,5,0">
+            <Path Data="F1M0,4.999C0.53,4.798 0.994,4.609 1.393,4.431 1.793,4.251 2.142,4.066 2.443,3.873 2.742,3.68 3.007,3.469 3.236,3.241 3.468,3.014 3.678,2.749 3.871,2.446 4.063,2.145 4.249,1.794 4.43,1.396 4.611,0.999 4.801,0.534 5.004,-0.001 5.206,0.534 5.396,0.999 5.577,1.396 5.758,1.794 5.944,2.145 6.137,2.446 6.329,2.749 6.539,3.014 6.767,3.241 6.994,3.469 7.26,3.68 7.562,3.873 7.865,4.066 8.214,4.251 8.609,4.431 9.008,4.609 9.47,4.798 10,4.999 9.47,5.203 9.008,5.395 8.609,5.571 8.214,5.747 7.865,5.932 7.562,6.125 7.26,6.318 6.994,6.528 6.767,6.756 6.539,6.984 6.329,7.249 6.137,7.551 5.944,7.853 5.758,8.203 5.577,8.601 5.396,8.998 5.206,9.464 5.004,9.999 4.798,9.464 4.605,8.998 4.427,8.601 4.249,8.203 4.063,7.853 3.871,7.551 3.678,7.249 3.468,6.984 3.236,6.756 3.007,6.528 2.742,6.318 2.443,6.125 2.142,5.932 1.793,5.746 1.393,5.567 0.994,5.388 0.53,5.199 0,4.999"
+                  Fill="#FF3ACADD" Height="10" Width="10"
+                  Canvas.Top="0"
+            />
+        </Canvas>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TimeIcon">
+        <Canvas Width="10" Height="10">
+            <Path Data="M0.557,5L0,5 0,0 0.557,0z" Fill="{StaticResource ContentForeground}" Height="5" Canvas.Left="4.5" Canvas.Top="0" Width="0.557"/>
+            <Path Data="M5,0.556L0,0.556 0,0 5,0z" Fill="{StaticResource ContentForeground}" Height="0.556" Canvas.Left="4.5" Canvas.Top="5" Width="5"/>
+            <Path Data="M5,9.444C2.547,9.444 0.557,7.454 0.557,5 0.557,2.545 2.547,0.555 5,0.555 7.453,0.555 9.443,2.545 9.443,5 9.443,7.454 7.453,9.444 5,9.444 M5,0C2.238,0 0,2.238 0,5 0,7.761 2.238,10 5,10 7.762,10 10,7.761 10,5 10,2.238 7.762,0 5,0" Fill="{StaticResource ContentForeground}" Height="10" Canvas.Left="0" Canvas.Top="0" Width="10"/>
+        </Canvas>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="EmptyCommand">
+        <!--<TextBlock>E</TextBlock>-->
+        <Border Width="42" Height="42" Background="Gray" Opacity="0.35" />
+    </DataTemplate>
+    
+    <commands:ActionTemplateSelector
+            x:Key="ActionTemplateSelector"
+            NullTemplate="{StaticResource EmptyCommand}"
+            MoveTemplate="{StaticResource MoveIcon}"
+            PaintTemplate="{StaticResource PaintActionIcon}"
+            CallTemplate="{StaticResource CallActionIcon}"
+        />
+</ResourceDictionary>

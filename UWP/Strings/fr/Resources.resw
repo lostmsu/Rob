@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TutorialToggle.Label" xml:space="preserve">
+    <value>Tutoriel</value>
+  </data>
+  <data name="Conditions.Content" xml:space="preserve">
+    <value>Les conditions</value>
+  </data>
+  <data name="FirstSteps.Content" xml:space="preserve">
+    <value>Les premières démarches</value>
+  </data>
+  <data name="Recursion.Content" xml:space="preserve">
+    <value>La récursivité</value>
+  </data>
+  <data name="TutorialTitle.Text" xml:space="preserve">
+    <value>Tutoriel</value>
+  </data>
+  <data name="AllCollection.Content" xml:space="preserve">
+    <value>TOUS</value>
+  </data>
+  <data name="App.Text" xml:space="preserve">
+    <value>Rob</value>
+  </data>
+  <data name="Settings.Text" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="CampaignCollection.Content" xml:space="preserve">
+    <value>CAMPAGNE</value>
+  </data>
+  <data name="CommandsClear.Text" xml:space="preserve">
+    <value>EFFACER</value>
+  </data>
+  <data name="DarkTheme.Content" xml:space="preserve">
+    <value>Sombre</value>
+  </data>
+  <data name="HideUnpopular.Text" xml:space="preserve">
+    <value>Seulement populaires </value>
+  </data>
+  <data name="LightTheme.Content" xml:space="preserve">
+    <value>Léger</value>
+  </data>
+  <data name="HideSolved.Text" xml:space="preserve">
+    <value>Masquer résolus</value>
+  </data>
+  <data name="Difficulty.Text" xml:space="preserve">
+    <value>difficulté:</value>
+  </data>
+  <data name="Edit.Label" xml:space="preserve">
+    <value>Correction</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>chargement...</value>
+  </data>
+  <data name="LoadingScreen.Text" xml:space="preserve">
+    <value>chargement...</value>
+  </data>
+  <data name="LoggingIn" xml:space="preserve">
+    <value>vous êtes connecté...</value>
+  </data>
+  <data name="Pause.Label" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Popularity.Text" xml:space="preserve">
+    <value>popularité:</value>
+  </data>
+  <data name="QueryingNewLevels" xml:space="preserve">
+    <value>téléchargant des nouveaux puzzles...</value>
+  </data>
+  <data name="Redo.Label" xml:space="preserve">
+    <value>Refaire</value>
+  </data>
+  <data name="SavingNewLevels" xml:space="preserve">
+    <value>enregistrement des mises à jour...</value>
+  </data>
+  <data name="Search.Label" xml:space="preserve">
+    <value>Recherche</value>
+    <comment>Search button caption</comment>
+  </data>
+  <data name="SearchPlaceholder" xml:space="preserve">
+    <value>titre de puzzle</value>
+  </data>
+  <data name="Start.Label" xml:space="preserve">
+    <value>Exécuter</value>
+  </data>
+  <data name="Step.Label" xml:space="preserve">
+    <value>Pas</value>
+  </data>
+  <data name="SubmittingSolutions" xml:space="preserve">
+    <value>envoyant les solutions...</value>
+  </data>
+  <data name="UISetting.Text" xml:space="preserve">
+    <value>L'INTERFACE UTILISATEUR</value>
+  </data>
+  <data name="ThemeSetting.Text" xml:space="preserve">
+    <value>Thème</value>
+  </data>
+  <data name="ThemeSettingNote.Text" xml:space="preserve">
+    <value>On doit redémarrer l'app après la modification du thème </value>
+  </data>
+  <data name="Undo.Label" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="RegisterButton.Content" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="LoginButton.Content" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="EmailSetting.Text" xml:space="preserve">
+    <value>E-mail (s'inscrire seulement)</value>
+  </data>
+  <data name="PasswordSetting.Text" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="LoginSetting.Text" xml:space="preserve">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="AccountSettingDescription.Text" xml:space="preserve">
+    <value>Se connecter à Internet. pour synchroniser votre liste des puzzles résolus et pour partager des statistiques avec d'autres.</value>
+  </data>
+  <data name="AccountSetting.Text" xml:space="preserve">
+    <value>Informations d'identification</value>
+  </data>
+  <data name="AI_Agree" xml:space="preserve">
+    <value>Accepter</value>
+  </data>
+  <data name="AI_Agreement" xml:space="preserve">
+    <value>Partagez vos démarches pour résoudre les Rob puzzles avec un projet de recherche en IA. Le but est de construire un solveur entièrement automatisé pour les Rob puzzles. Nous allons analyser ce que faut-il pour résoudrer les puzzles, et améliorer notre algorithme en conséquence.
+
+Termes et conditions
+1. Vous autorisez Lost Tech LLC la soumission de télémetrie de solution de puzzle.
+  La télémétrie peut inclure:
+   - ouverture de puzzle
+   - les étapes d'édition de programme (commandes d'édition, défaire, refaire, etc.)
+   - début, arrêt, pause, pas à pas exécution de programme
+   - horodatages des toutes les actions dessus
+   - Votre nom d'utilisateur et mot de passe haché pour RoboZZle.com
+
+2. Vous autorisez Lost Tech LLC à utiliser votre nom d'utilisateur et mot de passe haché pour RoboZZle.com pour vérifier que vous avez un compte valide sur RoboZZle.com. Lost Tech LLC ne sera pas stocker ces données ou les partager avec des tiers.
+
+3. Vous autorisez Lost Tech LLC l'utilisation des tous les autres télémetries énumérés dans 1. aux fins de la recherche en intelligence artificielle.
+
+4. Vous autorisez Lost Tech LLC l'utilisation gratuite de ces données, et tout produits de la recherche qui en dérivent à des fins commerciales, y compris le partage avec des tiers.</value>
+  </data>
+  <data name="AI_Decline" xml:space="preserve">
+    <value>Refuser</value>
+  </data>
+  <data name="AI_MustLogin" xml:space="preserve">
+    <value>Pour participer à la recherche en IA, vous devez vous connecter ou vous inscrire à un nouveau compte</value>
+  </data>
+  <data name="AI_OfferTitle" xml:space="preserve">
+    <value>Participer à la recherche en IA</value>
+  </data>
+  <data name="AI_Research.Text" xml:space="preserve">
+    <value>Recherche en IA</value>
+  </data>
+  <data name="AI_ResearchBlog.Text" xml:space="preserve">
+    <value>plus d’infos</value>
+  </data>
+  <data name="AI_ResearchSetting.Header" xml:space="preserve">
+    <value>Participer à la recherche Rob AI</value>
+  </data>
+  <data name="BlueConditionHint.Text" xml:space="preserve">
+    <value>Bleue seulement</value>
+  </data>
+  <data name="CallFunctionHint.Text" xml:space="preserve">
+    <value>Appeler une fonction (Fx)</value>
+  </data>
+  <data name="GreenConditionHint.Text" xml:space="preserve">
+    <value>Verte seulement</value>
+  </data>
+  <data name="MoveAroundHint.Text" xml:space="preserve">
+    <value>Sélectionner des éléments sur l'écran</value>
+  </data>
+  <data name="MovementActionsHint.Text" xml:space="preserve">
+    <value>Robot tourne ou se déplace</value>
+  </data>
+  <data name="PaintHint.Text" xml:space="preserve">
+    <value>Сhange la couleur (si permis)</value>
+  </data>
+  <data name="RedConditionHint.Text" xml:space="preserve">
+    <value>Rouge seulement</value>
+  </data>
+  <data name="RunPauseHint.Text" xml:space="preserve">
+    <value>Exécuter/Pause le robot</value>
+  </data>
+  <data name="StopHint.Text" xml:space="preserve">
+    <value>Arrêter le robot</value>
+  </data>
+  <data name="UnconditionalHint.Text" xml:space="preserve">
+    <value>Supprimer la condition</value>
+  </data>
+  <data name="XboxKeyMap.Content" xml:space="preserve">
+    <value>Boutons du contrôleur</value>
+  </data>
+  <data name="No_Internet" xml:space="preserve">
+    <value>pas d'Internet</value>
+  </data>
+  <data name="SubmitFailed_NoInternet" xml:space="preserve">
+    <value>Impossible d'envoyer la solution, car le service en ligne n'est pas disponible.
+Vous devrez réexécuter ce puzzle pour l'envoyer à nouveau.</value>
+  </data>
+</root>
