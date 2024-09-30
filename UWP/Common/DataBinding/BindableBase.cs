@@ -5,7 +5,9 @@ using System.Runtime.CompilerServices;
 /// <summary>
 /// Implementation of <see cref="INotifyPropertyChanged"/> to simplify models.
 /// </summary>
+#if UAP
 [Windows.Foundation.Metadata.WebHostHidden]
+#endif
 public abstract class BindableBase: INotifyPropertyChanged {
 	/// <summary>
 	/// Multicast event for property change notifications.

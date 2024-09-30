@@ -1,13 +1,17 @@
-﻿namespace RoboZZle.WinRT.Imported;
+﻿#nullable enable
+
+namespace RoboZZle.WinRT.Imported;
 
 using System.Collections;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Reflection;
 
+#if WINDOWS_UWP
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Data;
+#endif
 
 /// <summary>
 /// Simple implementation of the <see cref="ICollectionViewEx"/> interface,
@@ -40,6 +44,7 @@ public sealed class ListCollectionView:
 	ICollectionViewEx,
 	IEditableCollectionView,
 	INotifyPropertyChanged,
+	INotifyCollectionChanged,
 	IComparer<object?> {
 	//------------------------------------------------------------------------------------
 
@@ -122,22 +127,13 @@ public sealed class ListCollectionView:
 		this.HandleSourceChanged();
 	}
 
+#if WINDOWS_UWP
 	/// <summary>
 	/// Raises the <see cref="CurrentChanging"/> event.
 	/// </summary>
 	void OnCurrentChanging(CurrentChangingEventArgs e) {
 		if (this.updating <= 0) {
 			this.CurrentChanging?.Invoke(this, e);
-		}
-	}
-
-	/// <summary>
-	/// Raises the <see cref="CurrentChanged"/> event.
-	/// </summary>
-	void OnCurrentChanged(object e) {
-		if (this.updating <= 0) {
-			this.CurrentChanged?.Invoke(this, e);
-			this.OnPropertyChanged("CurrentItem");
 		}
 	}
 
@@ -153,6 +149,17 @@ public sealed class ListCollectionView:
 		if (this.updating <= 0) {
 			this.VectorChanged?.Invoke(this, e);
 			this.OnPropertyChanged("Count");
+		}
+	}
+#endif
+
+	/// <summary>
+	/// Raises the <see cref="CurrentChanged"/> event.
+	/// </summary>
+	void OnCurrentChanged(object? e) {
+		if (this.updating <= 0) {
+			this.CurrentChanged?.Invoke(this, e);
+			this.OnPropertyChanged("CurrentItem");
 		}
 	}
 
@@ -260,8 +267,11 @@ public sealed class ListCollectionView:
 		}
 
 		// notify listeners
+#if WINDOWS_UWP
 		var e = new VectorChangedEventArgs(CollectionChange.ItemInserted, index, item);
 		this.OnVectorChanged(e);
+#endif
+		this.OnCollectionChanged(new(NotifyCollectionChangedAction.Add, item, index));
 	}
 
 	// remove item from view
@@ -289,8 +299,11 @@ public sealed class ListCollectionView:
 		}
 
 		// notify listeners
+#if WINDOWS_UWP
 		var e = new VectorChangedEventArgs(CollectionChange.ItemRemoved, index, item);
 		this.OnVectorChanged(e);
+#endif
+		this.OnCollectionChanged(new(NotifyCollectionChangedAction.Remove, item, index));
 	}
 
 	// update view after changes other than add/remove an item
@@ -322,7 +335,10 @@ public sealed class ListCollectionView:
 		this.sortProps.Clear();
 
 		// notify listeners
+#if WINDOWS_UWP
 		this.OnVectorChanged(VectorChangedEventArgs.Reset);
+#endif
+		this.OnCollectionChanged(new(NotifyCollectionChangedAction.Reset));
 
 		// restore selection if possible
 		this.MoveCurrentTo(currentItem);
@@ -364,11 +380,13 @@ public sealed class ListCollectionView:
 		}
 
 		// fire changing
+#if WINDOWS_UWP
 		var e = new CurrentChangingEventArgs();
 		this.OnCurrentChanging(e);
 		if (e.Cancel) {
 			return false;
 		}
+#endif
 
 		// change and fire changed
 		this.index = index;
@@ -420,6 +438,7 @@ public sealed class ListCollectionView:
 		}
 	}
 
+#if WINDOWS_UWP
 	/// <summary>
 	/// Class that implements IVectorChangedEventArgs so we can fire VectorChanged events.
 	/// </summary>
@@ -435,7 +454,7 @@ public sealed class ListCollectionView:
 
 		public uint Index { get; }
 	}
-
+#endif
 	#endregion
 
 	//------------------------------------------------------------------------------------
@@ -469,11 +488,12 @@ public sealed class ListCollectionView:
 	/// Occurs after the current item has changed.
 	/// </summary>
 	public event EventHandler<object>? CurrentChanged;
+#if WINDOWS_UWP
 	/// <summary>
 	/// Occurs before the current item changes.
 	/// </summary>
 	public event CurrentChangingEventHandler? CurrentChanging;
-	/// <summary>
+		/// <summary>
 	/// Occurs when the view collection changes.
 	/// </summary>
 	public event VectorChangedEventHandler<object>? VectorChanged;
@@ -481,6 +501,7 @@ public sealed class ListCollectionView:
 	/// Gets a colletion of top level groups.
 	/// </summary>
 	public IObservableVector<object>? CollectionGroups => null;
+#endif
 
 	/// <summary>
 	/// Gets the current item in the view.
@@ -515,9 +536,11 @@ public sealed class ListCollectionView:
 	// async operations not supported
 	public bool HasMoreItems => false;
 
+#if WINDOWS_UWP
 	public IAsyncOperation<LoadMoreItemsResult> LoadMoreItemsAsync(uint count) {
 		throw new NotSupportedException();
 	}
+#endif
 
 	#region list operations
 
@@ -660,6 +683,21 @@ public sealed class ListCollectionView:
 
 	void OnPropertyChanged(string propName) {
 		this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+	}
+
+	#endregion
+
+	//------------------------------------------------------------------------------------
+
+	#region ** INotifyCollectionChanged
+
+	public event NotifyCollectionChangedEventHandler? CollectionChanged;
+
+	void OnCollectionChanged(NotifyCollectionChangedEventArgs args) {
+		if (this.updating <= 0) {
+			this.CollectionChanged?.Invoke(this, args);
+			this.OnPropertyChanged(nameof(this.Count));
+		}
 	}
 
 	#endregion

@@ -2,9 +2,9 @@
 
 using RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Media;
 
 public sealed partial class StaticPuzzleStateView: UserControl {
 	static readonly IValueConverter AutoScaler = new PuzzleAutoScaler();

@@ -2,7 +2,9 @@
 
 using System.Collections;
 
-using Windows.UI.Xaml.Data;
+#if WINDOWS_UWP
+using Microsoft.UI.Xaml.Data;
+#endif
 
 //--------------------------------------------------------------------------------
 
@@ -11,7 +13,13 @@ using Windows.UI.Xaml.Data;
 /// <summary>
 /// Extends the WinRT ICollectionView to provide sorting and filtering.
 /// </summary>
-public interface ICollectionViewEx: ICollectionView {
+public interface ICollectionViewEx
+#if WINDOWS_UWP
+	: ICollectionView
+#else
+	: IEnumerable
+#endif
+	{
 	/// <summary>
 	/// Gets a value that indicates whether this view supports filtering via the
 	/// <see cref="Filter"/> property.

@@ -1,6 +1,6 @@
 ﻿namespace RoboZZle.WinRT.Views.Commands;
 
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls;
 
 class ActionTemplateSelector: DataTemplateSelector {
 	public DataTemplate? MoveTemplate { get; set; }

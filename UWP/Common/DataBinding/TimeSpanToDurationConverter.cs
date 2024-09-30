@@ -1,9 +1,8 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
-
+#if WINDOWS_UWP
 class TimeSpanToDurationConverter: IValueConverter {
-	public object? Convert(object? value, Type targetType, object parameter, string language) {
+	public object? Convert(object? value, Type targetType, object parameter, CultureInfo culture) {
 		var time = (TimeSpan?)value;
 		if (targetType != typeof(Duration))
 			throw new ArgumentException($"Value must be a {typeof(Duration)}", nameof(targetType));
@@ -13,8 +12,9 @@ class TimeSpanToDurationConverter: IValueConverter {
 		return new Duration(time.Value);
 	}
 
-	object IValueConverter.ConvertBack(object value, Type targetType, object parameter,
-	                                   string language) {
+	object IValueConverter.ConvertBack(object? value, Type targetType, object? parameter,
+	                                   CultureInfo culture) {
 		throw new NotSupportedException();
 	}
 }
+#endif

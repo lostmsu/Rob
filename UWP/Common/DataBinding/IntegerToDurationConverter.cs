@@ -1,17 +1,16 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
-
+#if WINDOWS_UWP
 /// <summary>
 /// Converts integers to <see cref="Duration"/> values
 /// </summary>
-sealed class IntegerToDurationConverter: IValueConverter {
+public sealed class IntegerToDurationConverter: IValueConverter {
 	/// <summary>
 	/// Time units in ticks. Default value is <see cref="TimeSpan.TicksPerMillisecond"/>.
 	/// </summary>
 	public long TimeUnitInTicks { get; set; } = TimeSpan.TicksPerMillisecond;
 
-	public object Convert(object intValue, Type targetType, object parameter, string language) {
+	public object Convert(object? intValue, Type targetType, object? parameter, CultureInfo culture) {
 		if (targetType != typeof(Duration))
 			throw new ArgumentException("targetType");
 		long time = System.Convert.ToInt64(intValue);
@@ -19,7 +18,8 @@ sealed class IntegerToDurationConverter: IValueConverter {
 		return new Duration(new TimeSpan(ticks));
 	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, string language) {
+	public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		throw new NotImplementedException();
 	}
 }
+#endif

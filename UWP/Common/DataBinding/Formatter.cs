@@ -2,10 +2,8 @@
 
 using System.Globalization;
 
-using Windows.UI.Xaml.Data;
-
 public sealed class Formatter: IValueConverter {
-	public object? Convert(object value, Type targetType, object parameter, string language) {
+	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		if (parameter is not string format)
 			throw new ArgumentNullException(paramName: nameof(parameter),
 			                                "Format parameter must be specified");
@@ -15,7 +13,7 @@ public sealed class Formatter: IValueConverter {
 			: null;
 	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, string language) {
+	public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		throw new NotSupportedException();
 	}
 }

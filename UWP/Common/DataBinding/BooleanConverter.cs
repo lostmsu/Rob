@@ -1,13 +1,11 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
-
-sealed class BooleanConverter: IValueConverter {
+public sealed class BooleanConverter: IValueConverter {
 	public object? False { get; set; }
 	public object? True { get; set; }
 	public object? Null { get; set; }
 
-	public object? Convert(object? value, Type targetType, object parameter, string language) {
+	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo _) {
 		if (value == null)
 			return this.Null;
 
@@ -17,7 +15,7 @@ sealed class BooleanConverter: IValueConverter {
 		return boolean ? this.True : this.False;
 	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, string language) {
+	public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo _) {
 		throw new NotSupportedException();
 	}
 }

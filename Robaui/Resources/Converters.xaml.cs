@@ -1,0 +1,9 @@
+namespace Robaui.Resources;
+
+public partial class Converters : ResourceDictionary
+{
+	public Converters()
+	{
+		InitializeComponent();
+	}
+}

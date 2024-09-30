@@ -1,15 +1,12 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Media;
-
 using Color = RoboZZle.Core.Color;
-using WinColor = Windows.UI.Color;
+using WinColor = Microsoft.Maui.Graphics.Color;
 
 public sealed class ColorToBrushConverter: IValueConverter {
-	static readonly SolidColorBrush RedDefault = new(WinColor.FromArgb(0xFF, 0xFF, 0x10, 0x44));
-	static readonly SolidColorBrush GreenDefault = new(WinColor.FromArgb(0xFF, 0x85, 0xD1, 0x00));
-	static readonly SolidColorBrush BlueDefault = new(WinColor.FromArgb(0xFF, 0x00, 0xCC, 0xDB));
+	static readonly SolidColorBrush RedDefault = new(WinColor.FromRgb(0xFF, 0x10, 0x44));
+	static readonly SolidColorBrush GreenDefault = new(WinColor.FromRgb(0x85, 0xD1, 0x00));
+	static readonly SolidColorBrush BlueDefault = new(WinColor.FromRgb(0x00, 0xCC, 0xDB));
 
 	public Brush? Colored {
 		set => this.Red = this.Green = this.Blue = value;
@@ -21,11 +18,11 @@ public sealed class ColorToBrushConverter: IValueConverter {
 
 	public static ColorToBrushConverter Instance { get; } = new();
 
-	public object? Convert(object value, Type targetType, object parameter, string language) {
+	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		return this.Convert((Color?)value);
 	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, string language) {
+	public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		throw new NotSupportedException();
 	}
 

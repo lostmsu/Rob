@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RoboZZle.WinRT.Common.DataBinding;assembly=RoboZZle.DataBinding"
+             x:Class="Robaui.Resources.Converters">
+    <local:PuzzleToCommandsConverter x:Key="PuzzleToCommands" ReverseActionOrder="True" />
+    <local:ColorToBrushConverter x:Key="ColorToBrush"/>
+    <local:ColorToBrushConverter x:Key="ColorToForegroundBrush" Neutral="{StaticResource ContentForeground}" />
+    <local:BooleanNegationConverter x:Key="NotConverter" />
+    <local:ScaleConverter x:Key="CellSizeScale" Scale="20"/>
+    <!--<local:ModelViewModelConverter x:Key="ModelViewModelConverter"/>-->
+    <local:DebugConverter x:Key="DebugConverter" />
+    <local:StringCaseConverter x:Key="Capitalizer" Capitalize="True"/>
+    <!--<local:TimeSpanToDurationConverter x:Key="FastForwardConverter"/>
+    <local:IntegerToDurationConverter x:Key="MillisecondToDurationConverter" />-->
+    <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    <local:BooleanToDoubleConverter x:Key="BooleanToDoubleConverter"/>
+    <local:BooleanToDoubleConverter x:Key="SolvedOpacityConverter"
+    False="1" True="0.5"
+/>
+    <local:PopularityToRatingConverter x:Key="PopularityToRatingConverter"/>
+    <local:DifficultyToColorConverter x:Key="DifficultyToColorConverter"
+    EasyMedium="45" MediumHard="60" HardInsane="72"
+    EasyForeground="{StaticResource EasyForeground}"
+    MediumForeground="{StaticResource MediumForeground}"
+    HardForeground="{StaticResource HardForeground}"
+    InsaneForeground="{StaticResource InsaneForeground}"
+/>
+    <local:ObjectToVisibilityConverter x:Key="ObjectToVisibilityConverter"/>
+    <local:TimeSpanToTwoPartStringConverter x:Key="TimeSpanToTwoPartStringConverter"/>
+    <local:LocalizationConverter x:Key="LocalizationConverter" />
+    <local:Formatter x:Key="Formatter"/>
+    <local:IntegerToDecimalConverter x:Key="DifficultyConverter" Scale="-1" />
+    <local:PuzzleAutoScaler x:Key="PuzzleAutoScaler"/>
+    <local:FormatConverter x:Key="FormatConverter"/>
+</ResourceDictionary>

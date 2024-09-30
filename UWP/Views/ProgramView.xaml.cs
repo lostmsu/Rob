@@ -2,8 +2,8 @@
 
 using System;
 
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input;
 
 public sealed partial class ProgramView: UserControl {
 	public ProgramView() {

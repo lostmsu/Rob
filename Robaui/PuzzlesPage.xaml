@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Robaui.PuzzlesPage"
+             d:DesignWidth="800" d:DesignHeight="480"
+             mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ContentBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="72"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="64"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="Header" Background="{StaticResource Blue}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Orientation="Horizontal">
+                <Label x:Uid="App" Text=".Rob" Style="{StaticResource AppHeaderTextStyle}"
+                       Width="175"/>
+                <Rectangle Width="10"/>
+
+                <RadioButton
+                    Style="{StaticResource PuzzleSetButtonStyle}"
+                    x:Name="CampaignCollection"
+                    x:Uid="CampaignCollection"
+                    GroupName="PuzzleCollection"
+                    Content=".CAMPAIGN"
+                    CheckedChanged="PuzzleCollectionChecked"
+                />
+                <RadioButton
+                    Style="{StaticResource PuzzleSetButtonStyle}"
+                    x:Name="AllCollection"
+                    x:Uid="AllCollection"
+                    GroupName="PuzzleCollection"
+                    Content=".ALL"
+                    IsChecked="True"
+                    CheckedChanged="PuzzleCollectionChecked"
+                    IsEnabled="True"
+                    />
+            </StackLayout>
+
+            <Entry TextChanged="OnQuerySubmitted"
+                        Grid.Column="1"
+                        VerticalOptions="End"
+                        Width="120"
+                        Margin="0,0,12,15"
+                        />
+            <Button Grid.Column="2"
+                FontFamily="Segoe MDL2 Assets"
+                FontSize="24"
+                Background="Transparent"
+                BorderWidth="0"
+                Text=""
+                VerticalOptions="End"
+                Clicked="ShowSettings_Click"
+                Margin="0,0,12,16"
+                />
+        </Grid>
+
+        <Grid Grid.Row="2"
+        Background="{StaticResource ContentBackground}"
+    >
+            <!--<GridView x:Name="PuzzlesView"
+                    TabIndex="0"
+                    Margin="120,40,0,-50"
+                    IsItemClickEnabled="True" ItemClick="OnPuzzleClick" ItemContainerStyle="{StaticResource PuzzleItemContainerStyle}">
+             <GridView.ItemTemplate>
+                <DataTemplate>
+                  <views:PuzzleItem Width="440" Height="140"
+                                            Margin="6,0,0,0"
+                                            DataContext="{Binding Mode=OneTime}" />
+                </DataTemplate>
+              </GridView.ItemTemplate>
+            </GridView>-->
+            <ListView x:Name="PuzzlesView"
+                Margin="120,40,0,-50"
+                >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Puzzle.Title}" Style="{StaticResource PuzzleTitle}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+        <Border
+        Grid.Row="3"
+        Padding="120,0,0,0" Style="{StaticResource AppBarStyle}"
+    >
+            <Grid VerticalOptions="Center">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Orientation="Horizontal">
+                    <Grid Margin="0,0,30,0">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                            <Grid>
+                                <Label Text=".hide solved" x:Uid="HideSolved"
+                       Style="{StaticResource AppBarCheckbox}"/>
+                                <CheckBox 
+                          CheckedChanged="ShowLoadingOverlay"
+                          IsChecked="{Binding Filter.HideSolved, Mode=TwoWay}" />
+                            </Grid>
+
+                            <Grid>
+                                <Label Text=".hide unpopular" x:Uid="HideUnpopular"
+                       Style="{StaticResource AppBarCheckbox}"/>
+                                <CheckBox 
+                          Margin="10"
+                          CheckedChanged="ShowLoadingOverlay"
+                          IsChecked="{Binding Filter.HideUnpopular, Mode=TwoWay}"/>
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+
+                    <ProgressBar x:Name="StatusProgress" Width="200" Height="40"
+                         Margin="0,0,20,0"/>
+
+                    <Label x:Name="StatusText"
+                       Text="{Binding CurrentAction, Mode=OneWay, Converter={StaticResource LocalizationConverter}}"
+                       VerticalOptions="Fill"
+                       FontSize="14"
+                       />
+                </StackLayout>
+            </Grid>
+        </Border>
+        <!--<views:LoadingOverlay Grid.Row="2" x:Name="LoadingOverlay"/>-->
+    </Grid>
+
+</ContentPage>

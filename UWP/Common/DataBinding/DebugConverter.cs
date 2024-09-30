@@ -1,13 +1,11 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
-
-sealed class DebugConverter: IValueConverter {
-	public object Convert(object value, Type targetType, object parameter, string language) {
+public sealed class DebugConverter: IValueConverter {
+	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		return value;
 	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, string language) {
+	public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		return value;
 	}
 }

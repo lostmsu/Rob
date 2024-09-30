@@ -1,21 +1,19 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Media;
+using Microsoft.Maui.Controls.Shapes;
 
-class PuzzleAutoScaler: IValueConverter {
+public sealed class PuzzleAutoScaler: IValueConverter {
 	public int Width { get; set; } = 320;
 	public int Height { get; set; } = 240;
 
-	public object? Convert(object? value, Type targetType, object parameter, string language) {
+	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		if (value == null)
 			return null;
 
-		var puzzle = value as PuzzleStateViewModel;
-		if (puzzle == null)
+		if (value is not PuzzleStateViewModel puzzle)
 			throw new ArgumentException("Expected value of type " +
-			                            typeof(PuzzleStateViewModel).FullName + ". Got: " +
-			                            value.GetType().FullName);
+										typeof(PuzzleStateViewModel).FullName + ". Got: " +
+										value.GetType().FullName);
 
 		int startX = puzzle.Width;
 		int endX = -1;
@@ -45,7 +43,7 @@ class PuzzleAutoScaler: IValueConverter {
 		return result;
 	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, string language) {
+	public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		throw new NotSupportedException();
 	}
 }

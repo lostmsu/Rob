@@ -1,13 +1,12 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
-
 using Action = RoboZZle.Core.Action;
+using Command = Core.Command;
 
 public sealed class PuzzleToCommandsConverter: IValueConverter {
 	public bool ReverseActionOrder { get; set; }
 
-	public object? Convert(object? value, Type targetType, object parameter, string language) {
+	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		if (value is not Puzzle puzzle)
 			return null;
 
@@ -26,7 +25,7 @@ public sealed class PuzzleToCommandsConverter: IValueConverter {
 		       select grp;
 	}
 
-	IEnumerable<Action> GetActions(Puzzle puzzle) {
+	List<Action> GetActions(Puzzle puzzle) {
 		var result = new List<Action> {
 			new Movement { Kind = MovementKind.MOVE },
 			new Movement { Kind = MovementKind.TURN_LEFT },
@@ -59,7 +58,7 @@ public sealed class PuzzleToCommandsConverter: IValueConverter {
 		}
 	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, string language) {
+	public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		throw new NotSupportedException();
 	}
 }

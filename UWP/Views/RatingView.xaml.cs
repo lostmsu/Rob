@@ -2,7 +2,7 @@
 
 using System.Collections.ObjectModel;
 
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls;
 
 public sealed partial class RatingView: UserControl {
 	public RatingView() {

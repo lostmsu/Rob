@@ -1,0 +1,79 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    <Style x:Key="PuzzleListItemTitle" TargetType="Label">
+        <Setter Property="FontFamily" Value="Segoe UI Semilight" />
+        <Setter Property="TextColor" Value="#1C1C1C"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+
+    <Style x:Key="PuzzleListItemDescription" TargetType="Label">
+        <Setter Property="FontFamily" Value="Segoe UI Light"/>
+        <Setter Property="TextColor" Value="#7F7F7F"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <Style x:Key="PuzzleListItemDifficulty" TargetType="Label">
+        <Setter Property="FontFamily" Value="Segoe UI Semilight"/>
+        <Setter Property="TextColor" Value="#7F7F7F"/>
+        <Setter Property="FontSize" Value="12"/>
+    </Style>
+
+    <!--<Style x:Key="PuzzleListItemTime" TargetType="RichLabel">
+        <Setter Property="FontFamily" Value="Segoe UI Semilight"/>
+        <Setter Property="Foreground" Value="#1C1C1C"/>
+        <Setter Property="FontSize" Value="10"/>
+    </Style>-->
+
+    <Style x:Key="AppBarStyle" TargetType="Border">
+        <Setter Property="Background" Value="#F2F2F2"/>
+    </Style>
+
+    <Style x:Key="AppBarCheckbox" TargetType="Label">
+        <!--<Setter Property="Background" Value="#1C1C1C"/>-->
+        <Setter Property="TextColor" Value="#1C1C1C"/>
+        <Setter Property="FontFamily" Value="Segoe UI Semilight"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <Style x:Key="PuzzleTitle" TargetType="Label">
+        <Setter Property="FontFamily" Value="Segoe UI Light"/>
+        <Setter Property="TextColor" Value="#1C1C1C"/>
+        <Setter Property="FontSize" Value="26"/>
+    </Style>
+
+    <Style x:Key="EmptyCommandStyle" TargetType="Border">
+        <!--TODO: implement properly-->
+        <Setter Property="Background" Value="#E5E5E5"/>
+    </Style>
+
+    <Style x:Key="FunctionTitle" TargetType="Label">
+        <Setter Property="FontFamily" Value="Segoe UI"/>
+        <Setter Property="TextColor" Value="#1c1c1c"/>
+        <Setter Property="FontSize" Value="26"/>
+    </Style>
+
+    <Style x:Key="SolvedLengthBoxStyle" TargetType="Border">
+        <Setter Property="Background" Value="#7F7F7F"/>
+    </Style>
+
+    <Style x:Key="SolvedLengthTextStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="Black" />
+    </Style>
+
+    <SolidColorBrush x:Key="ContentBackground" Color="White" />
+    <SolidColorBrush x:Key="ContentForeground" Color="Black" />
+
+    <SolidColorBrush x:Key="ListViewItemPointerOverBackgroundThemeBrush" Color="#F2F2F2"/>
+    <SolidColorBrush x:Key="ListViewItemSelectedBackgroundThemeBrush" Color="Gold"/>
+    <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBackgroundThemeBrush" Color="Gold"/>
+    <SolidColorBrush x:Key="ListViewItemPlaceholderBackgroundThemeBrush" Color="#E5E5E5"/>
+
+    <SolidColorBrush x:Key="EasyForeground" Color="Green"/>
+    <SolidColorBrush x:Key="MediumForeground" Color="#C0C600"/>
+    <SolidColorBrush x:Key="HardForeground" Color="Orange"/>
+    <SolidColorBrush x:Key="InsaneForeground" Color="Red"/>
+
+    <!--<ImageBrush x:Key="PuzzleItemThumbnailBackground" ImageSource="../Assets/PuzzleItemBackground.png"/>-->
+</ResourceDictionary>

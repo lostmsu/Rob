@@ -2,8 +2,8 @@
 
 using RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Shapes;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Shapes;
 
 sealed class CellViewSlim {
 	readonly Rectangle cell = new() { Width = 19, Height = 19 };

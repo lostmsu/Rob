@@ -2,7 +2,7 @@
 
 using RoboZZle.WinRT.Common.Views;
 
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls;
 
 public sealed partial class PuzzleStateView: UserControl {
 	public PuzzleStateView() {

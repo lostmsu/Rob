@@ -1,14 +1,10 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
+public class FormatConverter: IValueConverter {
+	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
+		ArgumentNullException.ThrowIfNull(parameter);
 
-class FormatConverter: IValueConverter {
-	public object Convert(object value, Type targetType, object parameter, string language) {
-		string? format = parameter as string;
-		if (parameter == null)
-			throw new ArgumentNullException(nameof(parameter));
-
-		if (format == null)
+		if (parameter is not string format)
 			throw new ArgumentException("Converter parameter must be of type string",
 			                            nameof(parameter));
 
@@ -18,7 +14,7 @@ class FormatConverter: IValueConverter {
 		return string.Format(format, value);
 	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, string language) {
+	public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		throw new NotImplementedException();
 	}
 }

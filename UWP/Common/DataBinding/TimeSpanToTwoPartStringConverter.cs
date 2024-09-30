@@ -1,9 +1,7 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
-
 public sealed class TimeSpanToTwoPartStringConverter: IValueConverter {
-	public object? Convert(object? value, Type targetType, object parameter, string language) {
+	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		var time = (TimeSpan?)value;
 		if (targetType != typeof(string))
 			throw new ArgumentException("Value must be a System.String", nameof(targetType));
@@ -15,8 +13,8 @@ public sealed class TimeSpanToTwoPartStringConverter: IValueConverter {
 			: $"{time.Value.Minutes:D2}m {time.Value.Seconds:D2}s";
 	}
 
-	object IValueConverter.ConvertBack(object value, Type targetType, object parameter,
-	                                   string language) {
+	object? IValueConverter.ConvertBack(object? value, Type targetType, object? parameter,
+	                                    CultureInfo culture) {
 		throw new NotSupportedException();
 	}
 }

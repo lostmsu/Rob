@@ -1,9 +1,6 @@
 ﻿namespace RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Media;
-
-sealed class DifficultyToColorConverter: IValueConverter {
+public sealed class DifficultyToColorConverter: IValueConverter {
 	public int EasyMedium { get; set; } = 40;
 	public int MediumHard { get; set; } = 60;
 
@@ -14,7 +11,7 @@ sealed class DifficultyToColorConverter: IValueConverter {
 	public Brush? HardForeground { get; set; }
 	public Brush? InsaneForeground { get; set; }
 
-	public object? Convert(object? value, Type targetType, object parameter, string language) {
+	public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		if (value == null)
 			return null;
 
@@ -28,7 +25,7 @@ sealed class DifficultyToColorConverter: IValueConverter {
 		return this.InsaneForeground;
 	}
 
-	public object ConvertBack(object value, Type targetType, object parameter, string language) {
+	public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture) {
 		throw new NotSupportedException();
 	}
 }

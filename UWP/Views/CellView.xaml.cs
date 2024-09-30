@@ -2,7 +2,7 @@
 
 using RoboZZle.WinRT.Common.DataBinding;
 
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls;
 
 public sealed partial class CellView: UserControl {
 	public CellView() {
